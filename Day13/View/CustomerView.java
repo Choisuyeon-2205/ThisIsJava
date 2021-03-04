@@ -3,19 +3,19 @@ package com.kosta.day13.view;
 import java.util.*;
 import com.kosta.day13.model.*;
 
-//°í°´ Á¤º¸ º¸¿©ÁÖ±â
-//³ªÁß¿¡´Â À¥À¸·Î ÀüÈ¯... HTML, CSS, ...
+//ê³ ê° ì •ë³´ ë³´ì—¬ì£¼ê¸°
+//ë‚˜ì¤‘ì—ëŠ” ì›¹ìœ¼ë¡œ ì „í™˜... HTML, CSS, ...
 public class CustomerView {
 	
 	public static void display(List<CustomerDTO> custlist) {
-		System.out.println("****°í°´Á¤º¸ ¿©·¯°Ç****");
+		System.out.println("****ê³ ê°ì •ë³´ ì—¬ëŸ¬ê±´****");
 		for(CustomerDTO cust: custlist) {
 			System.out.println(cust);
 		}
 	}
 	
 	public static void display(CustomerDTO cust) {
-		System.out.println("****°í°´Á¤º¸ 1°Ç****");
+		System.out.println("****ê³ ê°ì •ë³´ 1ê±´****");
 		System.out.println(cust);
 	
 	}
