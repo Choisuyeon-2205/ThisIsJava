@@ -10,9 +10,9 @@ public class CollectionTest {
 	}
 	
 	private static void method4() {
-		//CollectionÀÇ ¹è¿­°ú Â÷ÀÌÁ¡: ¿©·¯ Å¸ÀÔ °¡´É, °¹¼ö°¡ ÀÚµ¿
-		//List interface: ¼ø¼­ ÀÖÀ½, Áßº¹ Çã¿ë
-		//±¸Çö class: ArrayList, LinkedList, Vector
+		//Collectionì˜ ë°°ì—´ê³¼ ì°¨ì´ì : ì—¬ëŸ¬ íƒ€ì… ê°€ëŠ¥, ê°¯ìˆ˜ê°€ ìë™
+		//List interface: ìˆœì„œ ìˆìŒ, ì¤‘ë³µ í—ˆìš©
+		//êµ¬í˜„ class: ArrayList, LinkedList, Vector
 		
 		List<String> datas= new Vector<String>();
 		datas.add(0, "Hello0");
@@ -21,12 +21,12 @@ public class CollectionTest {
 		datas.add("Hello3");
 		datas.add("JAVA");
 
-		System.out.println(datas.size()+"°Ç");
+		System.out.println(datas.size()+"ê±´");
 		datas.remove(2);
 		for(String s: datas) {
 			System.out.println(s);
 		}
-		System.out.println(datas.size()+"°Ç");
+		System.out.println(datas.size()+"ê±´");
 
 	}
 
@@ -38,12 +38,12 @@ public class CollectionTest {
 		datas.add("Hello3");
 		datas.add("JAVA");
 		
-		System.out.println(datas.size()+"°Ç");
+		System.out.println(datas.size()+"ê±´");
 		datas.remove(2);
 		for(String s: datas) {
 			System.out.println(s);
 		}
-		System.out.println(datas.size()+"°Ç");
+		System.out.println(datas.size()+"ê±´");
 		
 	}
 
@@ -55,28 +55,28 @@ public class CollectionTest {
 		datas.add("Hello3");
 		datas.add("JAVA");
 		
-		System.out.println(datas.size()+"°Ç");
+		System.out.println(datas.size()+"ê±´");
 		datas.remove(2);
 		for(String s: datas) {
 			System.out.println(s);
 		}
-		System.out.println(datas.size()+"°Ç");
+		System.out.println(datas.size()+"ê±´");
 		
 	}
 
 	private static void method1() {
-		//CollectionÀÇ ¹è¿­°ú Â÷ÀÌÁ¡: ¿©·¯ Å¸ÀÔ °¡´É, °¹¼ö°¡ ÀÚµ¿
-		//List interface: ¼ø¼­ ÀÖÀ½, Áßº¹ Çã¿ë
-		//±¸Çö class: ArrayList, LinkedList, Vector
+		//Collectionì˜ ë°°ì—´ê³¼ ì°¨ì´ì : ì—¬ëŸ¬ íƒ€ì… ê°€ëŠ¥, ê°¯ìˆ˜ê°€ ìë™
+		//List interface: ìˆœì„œ ìˆìŒ, ì¤‘ë³µ í—ˆìš©
+		//êµ¬í˜„ class: ArrayList, LinkedList, Vector
 		
 		ArrayList datas = new ArrayList();
 		datas.add(100); //AutoBoxing
 		datas.add(new Integer(100));
 		datas.add(2,"Hello");
 		datas.add(3,new String("Hello"));
-		datas.add(new Student("È«±æµ¿","³²",20));
+		datas.add(new Student("í™ê¸¸ë™","ë‚¨",20));
 		
-		//´ÜÁ¡: °­Á¦ Å¸ÀÔº¯È¯ÀÌ ÇÊ¿äÇÏ´Ù.
+		//ë‹¨ì : ê°•ì œ íƒ€ì…ë³€í™˜ì´ í•„ìš”í•˜ë‹¤.
 		Student s= (Student)datas.get(4);
 		System.out.println(s);
 	}
