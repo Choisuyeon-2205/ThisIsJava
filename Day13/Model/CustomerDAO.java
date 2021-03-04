@@ -2,45 +2,45 @@ package com.kosta.day13.model;
 
 import java.util.*;
 
-//»ç¿ëÀÚ¿äÃ»-> Controller-> Service(¾÷¹«·ÎÁ÷) -> DAO(Data Access Object)-> DB
-//  ÀÀ´ä               <-                <-                        <- 
-//DAO(Data Access Object): ¾÷¹« ·ÎÁ÷Áß¿¡ DB¿¡ °¡¾ßÇÏ´Â ¾÷¹«¸¦ ÀÛ¼ºÇÑ´Ù.
+//ì‚¬ìš©ììš”ì²­-> Controller-> Service(ì—…ë¬´ë¡œì§) -> DAO(Data Access Object)-> DB
+//  ì‘ë‹µ               <-                <-                        <- 
+//DAO(Data Access Object): ì—…ë¬´ ë¡œì§ì¤‘ì— DBì— ê°€ì•¼í•˜ëŠ” ì—…ë¬´ë¥¼ ì‘ì„±í•œë‹¤.
 
 public class CustomerDAO {
 	List<CustomerDTO> custlist= new ArrayList<CustomerDTO>();
 	
 	public CustomerDAO() {
-		custlist.add(new CustomerDTO(1,"ÀÓ»óÇõ","010-1234-5678","¼­¿ï"));
-		custlist.add(new CustomerDTO(2,"°í¼®¿ì","010-5555-5678","¿ï»ê"));
-		custlist.add(new CustomerDTO(3,"±èÇöÀ¯","010-6666-5678","±¤ÁÖ"));
-		custlist.add(new CustomerDTO(4,"ÀåÁØ¿µ","010-7777-5678","°æ±â"));
-		custlist.add(new CustomerDTO(5,"±èÇöºó","010-8888-5678","Á¦ÁÖ"));
+		custlist.add(new CustomerDTO(1,"ì„ìƒí˜","010-1234-5678","ì„œìš¸"));
+		custlist.add(new CustomerDTO(2,"ê³ ì„ìš°","010-5555-5678","ìš¸ì‚°"));
+		custlist.add(new CustomerDTO(3,"ê¹€í˜„ìœ ","010-6666-5678","ê´‘ì£¼"));
+		custlist.add(new CustomerDTO(4,"ì¥ì¤€ì˜","010-7777-5678","ê²½ê¸°"));
+		custlist.add(new CustomerDTO(5,"ê¹€í˜„ë¹ˆ","010-8888-5678","ì œì£¼"));
 	}
 
 	public List<CustomerDTO> selectAll() {
-		//¸ğµç °í°´À» Á¶È¸ÇÑ´Ù.
+		//ëª¨ë“  ê³ ê°ì„ ì¡°íšŒí•œë‹¤.
 
 		return custlist;
 	}
 
 	public CustomerDTO selectById(int custId) {
-		//¾ÆÀÌµğ·Î °í°´ Á¤º¸¸¦ Á¶È¸ÇÑ´Ù
+		//ì•„ì´ë””ë¡œ ê³ ê° ì •ë³´ë¥¼ ì¡°íšŒí•œë‹¤
 		for(CustomerDTO cust :custlist) {
-			if(cust.getCustId()==custId) return cust; //Ã£À»¶§
+			if(cust.getCustId()==custId) return cust; //ì°¾ì„ë•Œ
 		}
-		return null; //¸øÃ£À»¶§
+		return null; //ëª»ì°¾ì„ë•Œ
 	}
 
 	public CustomerDTO selectByPhone(String phone) {
-		//ÇÚµåÆù ¹øÈ£·Î °í°´ Á¤º¸¸¦ Á¶È¸ÇÑ´Ù.
+		//í•¸ë“œí° ë²ˆí˜¸ë¡œ ê³ ê° ì •ë³´ë¥¼ ì¡°íšŒí•œë‹¤.
 		for(CustomerDTO cust :custlist) {
-			if(cust.getPhone().equals(phone)) return cust; //Ã£À»¶§
+			if(cust.getPhone().equals(phone)) return cust; //ì°¾ì„ë•Œ
 		}
-		return null; //¸øÃ£À»¶§
+		return null; //ëª»ì°¾ì„ë•Œ
 	}
 
 	public int insert(CustomerDTO cust) {
-		//°í°´ Á¤º¸¸¦ ÀÔ·ÂÇÑ´Ù.(È¸¿ø°¡ÀÔ)
+		//ê³ ê° ì •ë³´ë¥¼ ì…ë ¥í•œë‹¤.(íšŒì›ê°€ì…)
 		boolean value= false;
 		
 		for(CustomerDTO c : custlist) {
@@ -57,7 +57,7 @@ public class CustomerDAO {
 	}
 
 	public int update(CustomerDTO cust) {
-		//°í°´ Á¤º¸¸¦ º¯°æÇÑ´Ù.
+		//ê³ ê° ì •ë³´ë¥¼ ë³€ê²½í•œë‹¤.
 							for(CustomerDTO c :custlist) {
 								if(c.getCustId()==cust.getCustId()) {
 									c.setAddress(cust.getAddress());
@@ -78,7 +78,7 @@ public class CustomerDAO {
 	}
 
 	public int delete(int custId) {
-		//°í°´Á¤º¸¸¦ »èÁ¦ÇÑ´Ù.
+		//ê³ ê°ì •ë³´ë¥¼ ì‚­ì œí•œë‹¤.
 
 //		for(CustomerDTO c :custlist) {
 //			if(c.getCustId()==custId) {
