@@ -5,7 +5,7 @@ import java.util.*;
 import com.kosta.day13.model.*;
 import com.kosta.day13.view.CustomerView;
 
-//¼­¹ö ÇÁ·Î±×·¥À¸·Î ÀÛ¼ºµÉ ¿¹Á¤(servlet, controller)
+//ì„œë²„ í”„ë¡œê·¸ëž¨ìœ¼ë¡œ ìž‘ì„±ë  ì˜ˆì •(servlet, controller)
 public class CustomerController {
 
 	public static void main(String[] args) {
@@ -17,15 +17,15 @@ public class CustomerController {
 		
 		while(true) {
 			System.out.println("==================");
-			System.out.println("1. ¸ðµÎ Á¶È¸");
-			System.out.println("2. Æ¯Á¤ °í°´Á¶È¸(id)");
-			System.out.println("3. Æ¯Á¤ °í°´Á¶È¸(phone)");
-			System.out.println("4. ÀÔ·Â");
-			System.out.println("5. ¼öÁ¤");
-			System.out.println("6. »èÁ¦");
-			System.out.println("0. ÇÁ·Î±×·¥ Á¾·á");
+			System.out.println("1. ëª¨ë‘ ì¡°íšŒ");
+			System.out.println("2. íŠ¹ì • ê³ ê°ì¡°íšŒ(id)");
+			System.out.println("3. íŠ¹ì • ê³ ê°ì¡°íšŒ(phone)");
+			System.out.println("4. ìž…ë ¥");
+			System.out.println("5. ìˆ˜ì •");
+			System.out.println("6. ì‚­ì œ");
+			System.out.println("0. í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
 			System.out.println("==================");
-			System.out.print("ÀÛ¾÷À» ¼±ÅÃÇÏ¼¼¿ä>> ");
+			System.out.print("ìž‘ì—…ì„ ì„ íƒí•˜ì„¸ìš”>> ");
 			
 			int select= sc.nextInt();
 			if(select==0) break;
@@ -35,40 +35,40 @@ public class CustomerController {
 				CustomerView.display(custlist);
 				break;
 			case 2:
-				System.out.println("Á¶È¸ÇÒ IDÀÔ·Â>>");
+				System.out.println("ì¡°íšŒí•  IDìž…ë ¥>>");
 				int custId= sc.nextInt();
 				cust= service.selectById(custId);
 				CustomerView.display(cust);
 				break;
 			case 3:
-				System.out.println("Á¶È¸ÇÒ PHONEÀÔ·Â>>");
+				System.out.println("ì¡°íšŒí•  PHONEìž…ë ¥>>");
 				String p= sc.next();
 				cust= service.selectByPhone(p);
 				CustomerView.display(cust);
 				break;
 			case 4:
-				System.out.println("½Å±ÔÀÔ·Â(1 AA 1234 Seoul)>>");
+				System.out.println("ì‹ ê·œìž…ë ¥(1 AA 1234 Seoul)>>");
 				cust= new CustomerDTO(sc.nextInt(), sc.next(), sc.next(),sc.next());
 				
 				result = service.insert(cust);
-				CustomerView.display(result==1?"ÀÔ·Â¼º°ø":"ÀÔ·Â½ÇÆÐ");
+				CustomerView.display(result==1?"ìž…ë ¥ì„±ê³µ":"ìž…ë ¥ì‹¤íŒ¨");
 				break;
 			case 5:
-				System.out.println("¼öÁ¤Á¤º¸(1 AA 1234 Seoul)>>");
+				System.out.println("ìˆ˜ì •ì •ë³´(1 AA 1234 Seoul)>>");
 				cust= new CustomerDTO(sc.nextInt(), sc.next(), sc.next(),sc.next());
 				
 				result = service.update(cust);
-				CustomerView.display(result==1?"¼öÁ¤¼º°ø":"¼öÁ¤½ÇÆÐ");
+				CustomerView.display(result==1?"ìˆ˜ì •ì„±ê³µ":"ìˆ˜ì •ì‹¤íŒ¨");
 				break;
 			case 6:
-				System.out.println("»èÁ¦ÇÒ ID ÀÔ·Â>>");
+				System.out.println("ì‚­ì œí•  ID ìž…ë ¥>>");
 				result= service.delete(sc.nextInt());
-				CustomerView.display(result==1?"»èÁ¦¼º°ø":"»èÁ¦½ÇÆÐ");
+				CustomerView.display(result==1?"ì‚­ì œì„±ê³µ":"ì‚­ì œì‹¤íŒ¨");
 				break;
 			}
 			
 		}
-		System.out.println("-----ÇÁ·Î±×·¥ Á¾·á------");
+		System.out.println("-----í”„ë¡œê·¸ëž¨ ì¢…ë£Œ------");
 		sc.close();
 	}
 
