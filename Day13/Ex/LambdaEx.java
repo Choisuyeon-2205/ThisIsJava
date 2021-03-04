@@ -4,11 +4,11 @@ import java.util.function.*;
 
 public class LambdaEx {
 	private static Student[] students= {
-			new Student("È«±æµ¿", 90, 96),
-			new Student("½Å¿ë±Ç", 95, 93)
+			new Student("í™ê¸¸ë™", 90, 96),
+			new Student("ì‹ ìš©ê¶Œ", 95, 93)
 	};
 	
-	//avg() ¸Ş¼Òµå ÀÛ¼º
+	//avg() ë©”ì†Œë“œ ì‘ì„±
 	public static double avg(ToIntFunction<Student> f) {
 		int sum=0;
 		
@@ -21,10 +21,10 @@ public class LambdaEx {
 
 	public static void main(String[] args) {
 		double englishAvg= avg(s-> s.getEnglishScore());
-		System.out.println("¿µ¾î Æò±Õ Á¡¼ö: "+ englishAvg);
+		System.out.println("ì˜ì–´ í‰ê·  ì ìˆ˜: "+ englishAvg);
 		
 		double mathAvg= avg(s-> s.getMathScore());
-		System.out.println("¼öÇĞ Æò±Õ Á¡¼ö: "+ mathAvg);
+		System.out.println("ìˆ˜í•™ í‰ê·  ì ìˆ˜: "+ mathAvg);
 		
 
 	}
