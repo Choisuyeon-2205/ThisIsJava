@@ -1,9 +1,9 @@
 package com.kosta.day07;
 
 /**
- * final class: »ó¼ÓºÒ°¡
- * final field: ¼öÁ¤ºÒ°¡
- * final method: ÀçÁ¤ÀÇ(¿À¹ö¶óÀÌµù)ºÒ°¡
+ * final class: ìƒì†ë¶ˆê°€
+ * final field: ìˆ˜ì •ë¶ˆê°€
+ * final method: ì¬ì •ì˜(ì˜¤ë²„ë¼ì´ë”©)ë¶ˆê°€
  * 
  * @author KOSTA
  *
@@ -15,14 +15,14 @@ public class Account extends Object {
 	private String ownerName;
 	private int balance;
 	
-	//2.default»ı¼ºÀÚ´Â Á¦°ø
+	//2.defaultìƒì„±ìëŠ” ì œê³µ
 	public Account() {
 		
 		
 	}
 	
 	public Account(String accNo, String ownerName, int balance) {
-		super(); //ºÎ¸ğ°¡ ¸ÕÀú »ı¼ºµÈ´Ù.
+		super(); //ë¶€ëª¨ê°€ ë¨¼ì € ìƒì„±ëœë‹¤.
 		this.accNo = accNo;
 		this.ownerName = ownerName;
 		this.balance = balance;
@@ -31,12 +31,12 @@ public class Account extends Object {
 	//3.method
 	public void deposit(int amount) {
 		balance+=amount;
-		System.out.println(amount+"°¡ ÀÔ±İµÇ¾ú½À´Ï´Ù.");
+		System.out.println(amount+"ê°€ ì…ê¸ˆë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 	
 	protected int withdraw(int amount) {
 		if(balance<amount) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			return 0;
 		}
 		balance-=amount;
