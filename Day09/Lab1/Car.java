@@ -5,7 +5,7 @@
 //public class Car implements Cloneable{
 //	String model;
 //	int price;
-//	String[] 厩技荤府;
+//	String[] 鍘╂妧鑽ゅ簻;
 //
 //	public Car(String model, int price) {
 //		super();
@@ -13,17 +13,17 @@
 //		this.price= price;
 //	}
 //
-//	public Car(String model, int price, String[] 厩技荤府) {
+//	public Car(String model, int price, String[] 鍘╂妧鑽ゅ簻) {
 //		super();
 //		this.model = model;
 //		this.price = price;
-//		this.厩技荤府 = 厩技荤府;
+//		this.鍘╂妧鑽ゅ簻 = 鍘╂妧鑽ゅ簻;
 //	}
 //
 //	@Override
 //	protected Object clone() throws CloneNotSupportedException {
 //		Car car= (Car)super.clone();
-//		car.厩技荤府= Arrays.copyOf(this.厩技荤府, this.厩技荤府.length);
+//		car.鍘╂妧鑽ゅ簻= Arrays.copyOf(this.鍘╂妧鑽ゅ簻, this.鍘╂妧鑽ゅ簻.length);
 //		
 //		return car;
 //	}
@@ -32,8 +32,8 @@
 //	@Override
 //	public String toString() {
 //		StringBuilder builder = new StringBuilder();
-//		builder.append("Car [model=").append(model).append(", price=").append(price).append(", 厩技荤府=")
-//				.append(Arrays.toString(厩技荤府)).append("]");
+//		builder.append("Car [model=").append(model).append(", price=").append(price).append(", 鍘╂妧鑽ゅ簻=")
+//				.append(Arrays.toString(鍘╂妧鑽ゅ簻)).append("]");
 //		return builder.toString();
 //	}
 //
