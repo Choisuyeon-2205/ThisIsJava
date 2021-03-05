@@ -9,8 +9,8 @@ class CellPhone{
 	}
 	
 	void call(int time) {
-		System.out.println("≈Î»≠ Ω√∞£: "+ time);
-		if(time<0) throw new IllegalArgumentException("≈Î»≠Ω√∞£ ¿‘∑¬ø¿∑˘");
+		System.out.println("ÌÜµÌôî ÏãúÍ∞Ñ: "+ time);
+		if(time<0) throw new IllegalArgumentException("ÌÜµÌôîÏãúÍ∞Ñ ÏûÖÎ†•Ïò§Î•ò");
 		
 		if((this.battery-time*0.5)>=0)
 			this.battery-=time*0.5;
@@ -20,8 +20,8 @@ class CellPhone{
 	}
 	
 	void charge(int time) {
-		System.out.println("√Ê¿¸ Ω√∞£: "+ time);
-		if(time<0) throw new IllegalArgumentException("√Ê¿¸Ω√∞£ ¿‘∑¬ø¿∑˘");
+		System.out.println("Ï∂©Ï†Ñ ÏãúÍ∞Ñ: "+ time);
+		if(time<0) throw new IllegalArgumentException("Ï∂©Ï†ÑÏãúÍ∞Ñ ÏûÖÎ†•Ïò§Î•ò");
 		
 		if((this.battery+time*3)<=100)
 			this.battery+=time*3;
@@ -30,7 +30,7 @@ class CellPhone{
 	}
 
 	public void printBattery() {
-		System.out.println("≥≤¿∫ πË≈Õ∏Æ æÁ: "+battery);
+		System.out.println("ÎÇ®ÏùÄ Î∞∞ÌÑ∞Î¶¨ Ïñë: "+battery);
 	}
 
 	@Override
@@ -47,20 +47,20 @@ public class CellPhoneMain {
 	public static void main(String[] args) { 
 		CellPhone myPhone = new CellPhone("SCH-600");
 		
-		myPhone.charge( 20 );  //20∫–∞£ √Ê¿¸¿ª «—¥Ÿ.
+		myPhone.charge( 20 );  //20Î∂ÑÍ∞Ñ Ï∂©Ï†ÑÏùÑ ÌïúÎã§.
 		myPhone.printBattery();
 		
-		myPhone.call( 300 );  //300∫–∞£ ≈Î»≠∏¶ «—¥Ÿ.
+		myPhone.call( 300 );  //300Î∂ÑÍ∞Ñ ÌÜµÌôîÎ•º ÌïúÎã§.
 		myPhone.printBattery();
 		
-		myPhone.charge( 50 );  //50∫–∞£ √Ê¿¸¿ª «—¥Ÿ.
+		myPhone.charge( 50 );  //50Î∂ÑÍ∞Ñ Ï∂©Ï†ÑÏùÑ ÌïúÎã§.
 		myPhone.printBattery();
 		
-		myPhone.call( 40 );  //40∫–∞£ ≈Î»≠∏¶ «—¥Ÿ.
+		myPhone.call( 40 );  //40Î∂ÑÍ∞Ñ ÌÜµÌôîÎ•º ÌïúÎã§.
 		myPhone.printBattery();
 		
 		try {
-			myPhone.call( -20 );  //≈Î»≠Ω√∞£¿Ã ¿ﬂ∏¯ ¿‘∑¬µ«æ˙¥Ÿ.
+			myPhone.call( -20 );  //ÌÜµÌôîÏãúÍ∞ÑÏù¥ ÏûòÎ™ª ÏûÖÎ†•ÎêòÏóàÎã§.
 		} catch(IllegalArgumentException e) {
 			System.out.println( e.getMessage() ); 
 		} 
@@ -68,9 +68,9 @@ public class CellPhoneMain {
 		CellPhone yourPhone = new CellPhone("SCH-600");
 		
 		if( myPhone.equals(yourPhone) ) {
-			System.out.println("µø¿œ ∏µ®¿‘¥œ¥Ÿ.");
+			System.out.println("ÎèôÏùº Î™®Îç∏ÏûÖÎãàÎã§.");
 		} else {
-			System.out.println("¥Ÿ∏• ∏µ®¿‘¥œ¥Ÿ.");
+			System.out.println("Îã§Î•∏ Î™®Îç∏ÏûÖÎãàÎã§.");
 		} 
 	} 
 }
