@@ -3,8 +3,8 @@ package com.kosta.day06.inheritance;
 public class StudentTest {
 
 	public static void main(String[] args) {
-		Person p= new Person("±è±æµ¿",20,"010-1234-5678");
-		Student s= new Student("±èÇĞ»ı",25,"010-3333-4444","890101","ÄÄÇ»ÅÍ°øÇĞ");
+		Person p= new Person("ê¹€ê¸¸ë™",20,"010-1234-5678");
+		Student s= new Student("ê¹€í•™ìƒ",25,"010-3333-4444","890101","ì»´í“¨í„°ê³µí•™");
 
 		System.out.println(p);
 		System.out.println(s);
