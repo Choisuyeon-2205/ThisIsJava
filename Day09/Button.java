@@ -5,14 +5,14 @@ import javax.swing.ButtonModel;
 class MessageListener implements Button.OnClickListener{
 	@Override
 	public void onClick() {
-		System.out.println("MessageListener¸¦ Å¬¸¯ÇÑ´Ù.");	
+		System.out.println("MessageListenerë¥¼ í´ë¦­í•œë‹¤.");	
 	}
 }
 
 class CallListener implements Button.OnClickListener{
 	@Override
 	public void onClick() {
-		System.out.println("CallListener¸¦ Å¬¸¯ÇÑ´Ù.");	
+		System.out.println("CallListenerë¥¼ í´ë¦­í•œë‹¤.");	
 	}
 }
 
@@ -20,15 +20,15 @@ public class Button {
 	OnClickListener listener;
 	
 	void setListener(OnClickListener listener) {
-		//º¯¼öÀÌ¸§ÀÌ¶û °°¾Æ¾ß ÁÁÀ½
+		//ë³€ìˆ˜ì´ë¦„ì´ë‘ ê°™ì•„ì•¼ ì¢‹ìŒ
 		this.listener= listener;
 	}
 	
-	//ÀÏ¹İ¸Ş¼Òµå
+	//ì¼ë°˜ë©”ì†Œë“œ
 	void touch() {
 		listener.onClick();
 	}
-	//inner interface --- Button Å¬·¡½º¿¡¼­¸¸ ¾²±âÀ§ÇÔ
+	//inner interface --- Button í´ë˜ìŠ¤ì—ì„œë§Œ ì“°ê¸°ìœ„í•¨
 	interface OnClickListener{
 		void onClick();
 	}
