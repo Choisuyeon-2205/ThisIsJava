@@ -7,13 +7,13 @@ public class Audio implements RemoteControl {
 	
 	@Override
 	public void turnOn() {
-		System.out.println("Audio Àü¿øÀ» ÄÒ´Ù.");
+		System.out.println("Audio ì „ì›ì„ ì¼ ë‹¤.");
 
 	}
 
 	@Override
 	public void turnOff() {
-		System.out.println("AudioÀü¿øÀ» ²ö´Ù.");
+		System.out.println("Audioì „ì›ì„ ëˆë‹¤.");
 
 	}
 	
@@ -34,7 +34,7 @@ public class Audio implements RemoteControl {
 			this.volume= RemoteControl.MIN_VAULE;
 		else
 			this.volume= volume;
-		System.out.println("ÇöÀç º¼·ıÀº "+this.volume);
+		System.out.println("í˜„ì¬ ë³¼ë¥¨ì€ "+this.volume);
 
 	}
 
