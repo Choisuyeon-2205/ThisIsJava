@@ -15,7 +15,7 @@ public class Account {
 			this.balance = balance;
 		
 //		if(balance<MIN_BALANCE || balance>MAX_BALANCE) {
-//			return; //»ý·«
+//			return; //Â»Ä±Â·Â«
 //		}else {
 //			this.balance = balance;
 //		}
