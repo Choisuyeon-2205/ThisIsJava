@@ -10,13 +10,13 @@ public class Radio implements Volume{
 	@Override
 	public void volumeUp(int level) {
 		this.VolLevel+= level;
-		System.out.println(getClass().getSimpleName()+" º¼·ıÀÌ "+level+"¸¸Å­ Áõ°¡ÇÏ¿©, "+this.VolLevel+"ÀÔ´Ï´Ù.");
+		System.out.println(getClass().getSimpleName()+" ë³¼ë¥¨ì´ "+level+"ë§Œí¼ ì¦ê°€í•˜ì—¬, "+this.VolLevel+"ì…ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void volumeDown(int level) {
 			this.VolLevel-= level;
-			System.out.println(getClass().getSimpleName()+" º¼·ıÀÌ "+level+"¸¸Å­ Áõ°¡ÇÏ¿©, "+this.VolLevel+"ÀÔ´Ï´Ù.");
+			System.out.println(getClass().getSimpleName()+" ë³¼ë¥¨ì´ "+level+"ë§Œí¼ ì¦ê°€í•˜ì—¬, "+this.VolLevel+"ì…ë‹ˆë‹¤.");
 	}
 
 }
