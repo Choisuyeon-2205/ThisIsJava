@@ -83,7 +83,7 @@ public class Book implements Cloneable, Comparable<Book>{
 
 	@Override
 	public int compareTo(Book newBook) {
-		//±âº» sort´Â °¡°İ ascending
+		//Â±Ã¢ÂºÂ» sortÂ´Ã‚ Â°Â¡Â°Ã ascending
 		return price - newBook.price; //Ascending
 	}
 	
