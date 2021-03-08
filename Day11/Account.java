@@ -1,9 +1,9 @@
 package com.kosta.day11;
 
 public class Account {
-	String accNo; //°èÁÂ¹øÈ£
-	String ownerName; //°í°´ÀÌ¸§
-	int balance; //ÀÜ¾×
+	String accNo; //ê³„ì¢Œë²ˆí˜¸
+	String ownerName; //ê³ ê°ì´ë¦„
+	int balance; //ì”ì•¡
 	
 	public Account(String accNo, String ownerName, int balance) {
 		super();
@@ -18,7 +18,7 @@ public class Account {
 	
 	public int withdraw(int amount) {
 		if(balance < amount) {
-			System.out.println("ÀÜ°íºÎÁ·");
+			System.out.println("ì”ê³ ë¶€ì¡±");
 			return 0;
 		}
 		balance-= amount;
