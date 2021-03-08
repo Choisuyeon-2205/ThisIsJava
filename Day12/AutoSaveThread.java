@@ -2,13 +2,13 @@ package com.kosta.day12;
 
 public class AutoSaveThread extends Thread {
 
-	//»ı¼ºÀÚ
+	//Â»Ã½Â¼ÂºÃ€Ãš
 	public AutoSaveThread(String name) {
 		setName(name);
 	}
 
 	public void save() {
-		System.out.println("ÀÚµ¿ ÀúÀåÇÕ´Ï´Ù.");
+		System.out.println("Ã€ÃšÂµÂ¿ Ã€ÃºÃ€Ã¥Ã‡Ã•Â´ÃÂ´Ã™.");
 	}
 	
 	public void run() {
